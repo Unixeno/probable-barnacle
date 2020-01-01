@@ -1,5 +1,4 @@
 package main
-
 import (
 	"context"
 	"fmt"
@@ -7,11 +6,10 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
 )
-
 func main() {
-	cli, err := client.NewClientWithOpts(client.FromEnv)
-	if err != nil {
-		panic(err)
+	cli, errhhh := client.NewClientWithOpts(client.FromEnv)
+	if errhhh != nil {
+		panic(errhhh)
 	}
 
 	containers, err := cli.ContainerList(context.Background(), types.ContainerListOptions{})
